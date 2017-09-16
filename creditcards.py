@@ -1,4 +1,4 @@
-#A netcat ctf problem I was solving, got through half the problem, not enough time to finish on-time
+#A netcat ctf problem I was solving, got through half the problem, did not have enough time to finish on-time
 
 import Netcat as net
 
