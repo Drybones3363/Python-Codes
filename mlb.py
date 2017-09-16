@@ -52,29 +52,31 @@ f = open('mlbdata.txt', 'r')
 Data = jsond.decode(f.read())
 
 while True:
-	inp = input("[1:Show Standings,2:...,3:...] ")
+	inp = raw_input("[1:Show Standings,2:...,3:...] ")
 	if inp == '1':
 		print("Team","Wins","Losses","Streak")
 		for e,r in Divisions.items():
 			print(e)
 			lst = list(r)
 			for i in range(len(lst)):
-				
+				pass
+
 
 
 
 	elif inp == '2':
-
+		pass
 
 
 	elif inp == '3':
-
+		pass
 
 	elif inp == 'reset':
 		newData = {}
 		for i in range(len(Teams)):
 			newData[Teams[i] ] = {"W":0,"L":0,"Streak":0}
 		Data = newData
+		print("Successfully reset season!")
 	elif inp == 'quit' or inp == 'exit':
 		break
 	else:
