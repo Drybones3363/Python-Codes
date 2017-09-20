@@ -138,7 +138,11 @@ def simgame(win):
 				Data[Teams[lst1[i] ] ]['Streak'] = 0
 			Data[Teams[lst1[i] ] ]['Streak'] -= 1
 
-
+def Save():
+	f = open('mlbdata.txt', 'w')
+	f.truncate()
+	f.write(jsone.encode(Data))
+	f.close()
 	
 
 while True:
@@ -167,8 +171,10 @@ while True:
 
 	elif inp == 'w':
 		simgame(True)
+		Save()
 	elif inp == 'l':
 		simgame(False)
+		Save()
 	elif inp[0:4] == 'set ':
 		t = inp[4:]
 		if t in Data:
@@ -186,10 +192,7 @@ while True:
 	else:
 		print("Error: Invalid Input")
 
-f = open('mlbdata.txt', 'w')
-f.truncate()
-f.write(jsone.encode(Data))
-f.close()
+Save()
 
 
 
